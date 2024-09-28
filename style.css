@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,700;1,400&display=swap');
+:root{
+    --cyan: hsl(171, 66%, 44%);
+    --light-blue: hsl(233, 100%, 69%);
+    --gray-blue: hsl(201, 11%, 66%);
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --white:#fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    
+}
+
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+}
+/* start */
+.container {
+    padding-left: 15px; 
+    padding-right: 15px;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+@media(min-width: 768px) {
+    .container {
+     width: 750px;
+    } 
+ }
+ @media(min-width: 992px) {
+    .container {
+     width: 970px;
+    }
+ } 
+ @media(min-width: 1200px) {
+    .container {
+     width: 1170px;
+    } 
+ }
+.heading{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.heading h2{
+color: var(--Dark-Grayish-Blue);
+margin-bottom: 15px;
+font-size: 35px;
+}
+.heading p{
+    color: var(--gray-blue);
+}
+/*end*/
+/*start Header*/
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header .container,
+.info .container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+header .container img{
+    width: 100px;
+    align-self: center;
+
+}
+header .container p,
+.info .container p{
+    width: 70;
+    margin: 0 auto;
+    color: var(--gray-blue);
+
+}
+header .container h1,
+.info .container h1{
+    font-size: 45px;
+    color: var(--Dark-Grayish-Blue);
+}
+header .container .actions,
+.info .container .actions{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(max-width:767px){
+    header .container .actions,
+    .info .container .actions{
+        flex-direction: column;
+    }
+}
+header .container .actions .btn,
+.info .container .actions .btn{
+    width: 48%;
+    border: none;
+    padding: 20px;
+    border-radius: 25px;
+    color: var(--white);
+    font-size: 20px;
+    transition: .5s;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+@media(max-width:767px){
+    header .container .actions .btn,
+    .info .container .actions .btn{
+        width: 100%;;
+    }
+    }
+header .container .actions .btn:hover,
+.info .container .actions .btn:hover{
+    transform: scale(1.1);
+}
+
+header .container .actions .btn-ios,
+.info .container .actions .btn-ios{
+    background-color: var(--cyan);
+    box-shadow: 5px 5px 5px var(--cyan);
+}
+header .container .actions .btn-mac,
+.info .container .actions .btn-mac{
+    background-color: var(--light-blue);
+    box-shadow: 5px 5px 5px var(--light-blue);
+}
+
+/*End Header*/
+/*Start Snippets*/
+.snippets{
+padding: 50px 0;
+}
+.snippets .row{
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+@media(max-width:767px){
+    .snippets .row{
+        flex-direction: column;
+    }
+    }
+.snippets .image{
+    width: 50%;
+    height: 500px;
+}
+@media(max-width:767px){
+    .snippets .row .image{
+        height: unset;
+    }
+    }
+.snippets .image img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    position: relative;
+    left: -20px;
+}
+@media(max-width:767px){
+    .snippets .row .image img{
+       position:unsets;
+    }
+    }
+.snippets .text{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+@media(max-width:767px){
+    .snippets .row .text{
+        width: 100%;
+        text-align: center;
+        padding: 0 15px;
+        margin: 15px 0;
+    }
+    }
+.snippets .text li{
+    padding-right: 15px;
+    margin-bottom: 20px;
+}
+.snippets .text h3{
+    color: var(--Dark-Grayish-Blue);
+    margin-bottom: 10px;
+}
+.snippets .text p{
+    color: var(--gray-blue);
+}
+
+
+/*End Snippets*/
+/* start gallery*/
+.gallery{
+    padding: 50px 0;
+}
+.gallery .image{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+@media(max-width:767px){
+    .gallery .image{
+        width: 350px;
+    }
+}
+.gallery .image img{
+    width: 100%;
+    max-width: 100%;
+}
+/* end gallery*/
+/*strat workflow*/
+.workflow{
+    padding: 50px 0;
+}
+.workflow .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.workflow .container .box{
+    text-align: center;
+    width: 300px;
+    height: 250px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(max-width:767px){
+    .workflow .container .box{
+        width: 100%;
+       
+    }
+    }
+.workflow .container .box img{
+height: 30%;
+}
+.workflow .container .box h3{
+    height: 15%;
+    color: var(--Dark-Grayish-Blue);
+}
+.workflow .container .box p{
+    color: var(--gray-blue);
+    height: 40%;
+}
+/*end workflow*/
+/*start brands*/
+.brands{
+    padding: 50px 0;
+}
+.brands .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media(max-width:767px){
+    .brands .container{
+        flex-direction: column;
+        height: 500px;
+    }
+       
+    }
+
+.brands .container img{
+    width: 165px;
+    max-width: 100%;
+}
+/*end brands*/
+/*start info*/
+.info,
+.info .container h1,
+.info .container p{
+    padding: 50px 0;
+}
+
+/*end info*/
+footer{
+    padding: 50px 0;
+    background-color: #eee;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .container img{
+    width: 60px;
+    height: 60px;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+footer .container .links{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .container  .socialmedia{
+    display: flex;
+    width: 200px;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
